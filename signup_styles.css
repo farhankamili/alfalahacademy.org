@@ -232,3 +232,19 @@ footer {
   padding: 20px;
 }
 
+#farhan-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+#ayaan-link {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  color: inherit;
+}
+
+#farhan-link:hover, #ayaan-link:hover {
+  text-decoration: none;
+  /* text-underline-offset: 0.25rem; */
+  color: white;
+}
