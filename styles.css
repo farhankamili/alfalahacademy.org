@@ -4,8 +4,26 @@ h1,h2 {
 }
 
 a {
-    color:bisque
+    color:bisque;
+    text-decoration: none;
 }
 body {
     background-color: rgb(119, 153, 145);
+}
+
+.nav_bar {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 25px;
+    font-size: 25px;
+}
+
+.nav_item {
+    display: inline;
+    margin: auto;
+    padding-right: 25px;
+}
+
+.nav_link {
+    text-decoration: none;
 }

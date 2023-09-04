@@ -1,0 +1,234 @@
+:root {
+  --main: rgba(135, 198, 207, 0.9);
+  --primary: rgba(14, 54, 94);
+  --secondary: #267b26;
+  --highlight: #f2571f;
+  --bright: #cf6b0d;
+  --dark: rgb(200, 200, 200,0.8);
+  --placeholder: var(--dark);
+  --max-width: 800px;
+  --min-width: 300px;
+  --bgimg: url(https://assets.hongkiat.com/uploads/pattern-wallpapers/original/19.jpg);
+  /* https://assets.hongkiat.com/uploads/pattern-wallpapers/original/19.jpg */
+  /* https://wallpapers.com/images/featured/pattern-4u7ed6koskqhcez1.jpg */
+  /* https://assets.hongkiat.com/uploads/pattern-wallpapers/original/19.jpg */
+  /* https://i.stack.imgur.com/SvWWN.png */
+  /* https://cssdeck.com/blog/wp-content/uploads/2022/04/image-background.jpg */
+}
+
+/* Document settings */
+html {
+  font-family: "Open Sans", Georgia, 'Times New Roman', Times, serif ;
+  height: 100%;
+
+}
+
+/* div element to achieve background with parallax effect */
+.parallax {
+  min-height: 100%;
+  background-image: var(--bgimg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Navigation bar settings */
+.nav_bar {
+  padding: 25px;
+  padding-bottom: 0;
+  font-size: 25px;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+/* Form title section */
+.intro {
+  margin: auto;
+  padding-top: 50px;
+  max-width: var(--max-width);
+  min-width: var(--min-width);
+  font-size: 20px;
+  color: var(--primary);
+  text-align: center;
+}
+
+/* Section containing form element */
+.form_section {
+  max-width: var(--max-width);
+  min-width: var(--min-width);
+  margin: auto;
+  background-color: var(--main);
+  box-sizing: border-box;
+  border-radius: 25px;
+  box-shadow: -20px 20px 50px 20px color-mix(in srgb, var(--primary), transparent 30%); 
+  /* box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]; */
+}
+
+/* Form fieldsets */
+fieldset {
+  /*margin-left: 2vw;*/
+  border: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+/* Fieldset titles are all h2 */
+h2 {
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom-style: solid;
+  font-size: 25px;
+  color: var(--secondary);
+  /* border-left-style: solid;
+     border-left-width: 10px; */
+  border-color: var(--primary);
+}
+
+/* Paragraph (p) description of the form */
+#description {
+  font-size: 20px;
+  color: var(--primary);
+  padding-top: 30px;
+  margin: auto;
+}
+
+/* Labels for inputs */
+label {
+  display: block;
+  color: var(--primary);
+  font-size: 20px;
+}
+
+/* Highlighting labels for selected radio buttons */
+label:has(> input[type="radio"]:checked){
+  font-weight: bolder;
+  font-size: 22px;
+  color: white;
+}
+
+/* Highlighting labels for selected checkboxes */
+label:has(> input[type="checkbox"]:checked){
+  font-weight: bolder;
+  /* font-size: 22px;
+  color: white; */
+}
+
+/* Inputs and dropdowns */
+input, select {
+  margin: 0.5rem 0;
+  font-size: 20px;
+  background-color: color-mix(in srgb, var(--primary), transparent 50%);
+  border-style: solid;
+  border-color: var(--primary);
+  border-left-width: 10px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: color-mix(in srgb, white, transparent 0%);
+  /* box-shadow: -4px 5px 0px 2px color-mix(in srgb, var(--primary),transparent 50%); */
+}
+select {
+  appearance: none;
+}
+input {
+  width: 50%;
+}
+
+/* Number type input */
+#number {
+  width: 80px;
+}
+
+/* Placeholder text for text-field inputs  */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--placeholder);
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: var(--placeholder);
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: var(--placeholder);
+}
+
+/* Radio buttons and checkboxes */
+input[type="radio"],input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 15px;
+  transform: scale(1.5);
+}
+
+/* Cheeky Easy A checkbox */
+.hardA {
+  display: none;
+}
+#easy:checked ~ .hardA{
+  display: inline;
+}
+#easy:checked ~ .easyA{
+  display: none;
+}
+
+/* Text-areas */
+textarea {
+  background-color: color-mix(in srgb, var(--primary), transparent 50%);
+  color: white;
+  font-size: 18px;
+  font-family: "Open Sans", Georgia, 'Times New Roman', Times, serif;
+  width: 95%;
+  height: 4em;
+  margin: 10px 0 15px 0; /* margin: top right bottom left*/
+  border-style: solid;
+  border-color: var(--primary);
+  border-left-width: 10px;
+  border-radius: 5px;
+  padding: 10px; /* paddnig: top right bottom left */
+  resize: none;
+} 
+
+/* Submit button */
+#submit {
+  width: 66%;
+  margin: 20px auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary);
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--main);
+  box-shadow: -4px 5px 0px 2px color-mix(in srgb, var(--primary),transparent 50%);
+}
+
+/* Submit button color change on hover */
+#submit:hover {
+  background-color: var(--bright);
+  color: white;
+  cursor: pointer;
+}
+
+/* Submit button color change and animation on click */
+#submit:active {
+  background-color: var(--bright);
+  color: white;
+  transform: translateY(3px);
+  box-shadow: -1px 1px 1px 1px color-mix(in srgb, var(--primary),transparent 50%);
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  font-size: 18px;
+  text-align: center;
+  color: var(--secondary);
+  padding: 20px;
+}
+

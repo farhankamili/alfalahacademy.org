@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="signup_styles.css" />
+    <!-- link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono|Fira+Mono|Ubuntu|Ubuntu+Mono|Open+Sans">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Farhan Kamili's CTE Interest Form">
+    <title>CTE Interest Form</title>
+</head>
+<html lang="en">
+<div class="parallax">
+    <nav class="nav_bar">
+        <a class="nav_link" href="index.html"> Home</a>
+    </nav>
+    <section class="intro">
+        <h1 id="title">CTE Electives Interest Form</h1>
+    </section>
+    <section class="form_section">
+        <form id="survey-form" action="thankyou.html">
+            <fieldset class="text">
+                <p id="description">
+                    This is an interest form for planning Career and Technical Education (CTE)
+                    topics at Al Falah Academy. <br /><br />The
+                    course will be taught by Brother <a href="https://www.farhan.wiki" target="_blank">Farhan
+                        Kamili</a>. <br /><br />Please indicate
+                    your interests using the registration form below.
+                </p>
+            </fieldset>
+            <fieldset class="info">
+                <h2>Enter your information:</h2>
+                <label id="name-label" for="name">Full name:</label>
+                <input id="name" type="text" placeholder="Enter your name" required />
+                <label id="email-label" for="email">Email: </label>
+                <input id="email" type="email" placeholder="Enter your email" required />
+                <label id="number-label" for="number">Please enter your age: </label>
+                <input id="number" type="number" min="8" max="99" step="1" placeholder="Age" size="50" required />
+                <label id="grade-label" for="dropdown">
+                    Please select the grade your current grade level:
+                </label>
+                <select name="grade" id="dropdown">
+                    <!-- <option value="six">Middle School</option> -->
+                    <option value="9">9th Grade - Freshman </option>
+                    <option value="10">10th Grade - Sophomore</option>
+                    <option value="11">11th Grade - Junior</option>
+                    <option value="12">12th Grade Senior</option>
+                    <option value="parent">Parent of Student</option>
+                    <option value="staff">Staff Member</option>
+                </select>
+            </fieldset>
+            <fieldset class="radio_buttons">
+                <!--These are the radio buttons -->
+                <h2>Which topic are you most interested in learning about?</h2>
+                <label id="web_design-label" for="web-design"><input type="radio" id="web-design" name="interest" value="web-design" checked />Designing a
+                    website using code</label>
+                <label id="cad-label" for="cad"><input type="radio" id="cad" name="interest" value="cad"/>Designing 3D objects using computer aided design</label>
+                <label id="robotics-label" for="robotics"><input type="radio" id="robotics" name="interest" value="robotics"/>Making
+                    simple robots with electronics</label>
+                <label id="AI-label" for="AI"><input type="radio" id="AI" name="interest" value="AI"/>Understanding and using
+                    Artificial Intelligence (AI)</label>
+                <!-- Some future options
+                <label id="investing-label" for="investing"><input type="radio" id="investing" name="interest" />Handling finance and investing</label>
+                <label id="business-label" for="business"><input type="radio" id="business" name="interest">Creating and maintaining a business</label>
+                <label id="carpentry-label" for="carpentry"><input type="radio" id="carpentry" name="interest" >Building a model of a home</label>
+                -->
+            </fieldset>
+            <fieldset class="checkboxes">
+                <h2>Why do you want to sign up for Br. Farhan's CTE class?</h2>
+                <label for="interest" id="interest-label"><input type="checkbox" name="interest" id="interest" value="interest">I am interested in the selected topic</label>
+                <label for="recommend" id="recommend-label"><input type="checkbox" name="recommend" id="recommend" value="recommend">Someone recommended your class</label>
+                <label for="admin" id="admin-label"><input type="checkbox" name="admin" id="admin" value="admin">An admin or parent made me</label>
+                <label for="boring" id="boring-label"><input type="checkbox" name="boring" id="boring" value="boring">The other options are not as interesting</label>
+                <label for="easy" id="easy-label"><input type="checkbox" name="easy" id="easy" value="easy">I want<span class="easyA"> an easy </span><span class="hardA"> a hard earned </span>A</label>
+            </fieldset>
+            <fieldset class="textareas">
+                <h2>Please respond to the following questions:</h2>
+                <label for="use" id="use-label">How do you hope to use the topic you selected?</label>
+                <textarea name="use" id="use" placeholder="By the end of the course, I want to be able to..." required></textarea>
+                <label for="other-topics" id="other-topics-label">Are there any other topics you would like to learn about?</label> 
+                <textarea name="other-topics" id="other-topics" placeholder="It would be cool if we also learned about..." required></textarea>
+            </fieldset>
+            <fieldset class="submit-button">
+                <button id="submit" value="submit">Submit</button>
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <p>Credit to Ayaan Kamili for helping code this form.</p>
+    </footer>
+</div>
+
+</html>
