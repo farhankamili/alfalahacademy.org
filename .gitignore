@@ -1,2 +1,5 @@
+# Standard mac ignore
+.dstore
+
 # Ignore stored and not-used pics
 resources/pics/
