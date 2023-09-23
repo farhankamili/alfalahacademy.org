@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+}
+
 :root {
   --main: rgba(135, 198, 207, 0.9);
   --primary: rgba(14, 54, 94);
