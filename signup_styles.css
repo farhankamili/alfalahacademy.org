@@ -12,7 +12,7 @@
   --placeholder: var(--dark);
   --max-width: 800px;
   --min-width: 300px;
-  --bgimg: url(https://assets.hongkiat.com/uploads/pattern-wallpapers/original/19.jpg);
+  --bgimg: url("https://assets.hongkiat.com/uploads/pattern-wallpapers/original/19.jpg");
   /* https://assets.hongkiat.com/uploads/pattern-wallpapers/original/19.jpg */
   /* https://wallpapers.com/images/featured/pattern-4u7ed6koskqhcez1.jpg */
   /* https://assets.hongkiat.com/uploads/pattern-wallpapers/original/19.jpg */
