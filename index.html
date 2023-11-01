@@ -1,23 +1,253 @@
+<!-- silly document -->
 <!DOCTYPE html>
-<html lang="en">
-<head><!-- sdasdsd -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Unofficial AFA Site</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name='description' content="AFA's unofficial newspaper">
+    <meta onload="openPage('Home')">
+    <meta name="viewport" content="width=device-width">
+    <title>Al Falah Academy Newsletter</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+<!--                     nav                          -->
+  <div class='navdiv'> 
+    <div class="line"> </div>
 <nav>
-    <ul class="nav_bar">
-        <li class="nav_item"><a class="nav_link" href="#">About</a></li>
-        <li class="nav_item"><a class="nav_link" href="#">Contact</a></li>
-        <li class="nav_item"><a class="nav_link" href="#">Students</a></li>
-        <li class="nav_item"><a class="nav_link" href="signup.html">Interest Form</a></li>
-    </ul>
+<ul>
+  <li><a class='navlinks' target="_self" onclick="openPage('Home')">Home</a></li>
+  
+  <li><a class='navlinks' target="_self" onclick="openPage('News')">Articles</a></li>
+  
+  <li><a class='navlinks' target="_self" onclick="openPage('Contact')">Contact Us</a></li>
+  
+  <li><a class='navlinks' target="_self" onclick="openPage('About')">About</a></li>
+  
+</ul>
+  <div class='logo'></div>
 </nav>
-<body>
+  </div>
+  
+<!--                     Website                          -->
+
+  
+  <div id="Home" class="tabcontent">
+ 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Home</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+  <main>
+    <h1 class="title">Welcome to the official AFA Newsletter</h1>
+    <div class='disc'>
+    <p class="description">Now run by students!</p>
+    <p class='description'>
+    Catch up on all the latest news going on in the highschool.
+    </p>
+    </div>
     
-    <h1>Official Al Falah Academy website: <a href="http://www.alfalahacademy.com" target="_self"> Alfalahacademy.com</a></h1>
-    <h2>This is the unofficial Al Falah Academy website</h2>
-    <h2>This site is run by the Al Falah Academy Computer Science: Web Design class</h2>
+    <!--              cards                  -->
+    
+    <section class="grid">
+      
+         <div class='card' target="_self" onclick="openPage('Recap')">    <div href="" class='card tablink'>
+        <h2 class="main-content">Recap &rarr;</h2>
+        <p class="main-content">
+         Here's a summary of what happened last week.
+        </p>
+      </div></div>
+
+      <div class='card' target="_self" onclick="openPage('ShoutOuts')"> 
+      <div   target="_self" href="" class='card tablink' onclick="openPage('ShoutOuts')">
+        <h2 class="main-content">Shout-outs &rarr;</h2>
+        <p class="main-content">Check out what the students have been doing.</p>
+      </div></div>
+
+     <div class="card" target="_self" onclick="openPage('Polls')">  <div  target="_self" href="" class='card tablink' onclick="openPage('Polls')">
+        <h2 class="main-content">Polls &rarr;</h2>
+        <p class="main-content">
+         Get the student's opinions on our weekly polls.
+        </p>
+      </div></div>
+
+      <div class='card' target="_self" onclick="openPage('Hadiths')"> 
+      <div   target="_self" href="" class='card tablink' onclick="openPage('Hadiths')">
+        <h2 class="main-content">Weekly Hadith &rarr; </h2>
+        <p class="main-content">
+         Spiritual Health is important, so remember to make duas and pray.
+        </p>
+      </div></div>
+
+      <div class='card' target="_self" onclick="openPage('ClubNews')"> 
+      <div   target="_self" href="" class='card tablink' onclick="openPage('ClubNews')">
+        <h2 class="main-content">Club News &rarr;</h2>
+        <p class="main-content">
+         Catch all the updates and events in the high school clubs.
+    
+        </p>
+      </div></div>
+      
+    </section>
+<section><p class="main-content AFAWEB centerbut"><a href="https://alfalahacademy.com/">Check out the official Al-Falah Academy Website!</a></p></section>
+  </main>
+
+     
+  </div>
+
+  
+<!--            card stuff (weekly updates)           -->
+  <div id="Recap" class="tabcontent"><div class='Divider'> </div>
+    <h1 class="title">Recap</h1>
+    <p>Here's what happened last week:</p>
+  </div>
+  
+  <div id="ShoutOuts" class="tabcontent"><div class='Divider'> </div>
+    <h1 class="title">Shout-Outs</h1>
+     <p>A quick tribute to the people of the school.</p>
+  </div>
+
+  <div id="Polls" class="tabcontent"><div class='Divider'> </div>
+    <h1 class="title">Polls</h1>
+     <p>Check out what the students have to say this week!</p>
+  </div>
+  
+  <div id="Hadiths" class="tabcontent"><div class='Divider'> </div>
+    <h1 class="title">Hadith of the Week</h1>
+     <p>Check out the hadith of the week, and make sure to make dua for the civilians being killed in the ongoing war.</p>
+  </div>
+  
+  <div id="ClubNews" class="tabcontent ClubNews"><div class='Divider'> </div>
+    <h1 class="title">Club News</h1>
+    <p>Find out all the news with the Al-Falah Clubs.</p>
+    <button class="button" type="button"
+    onclick="document.getElementById('demo').innerHTML = Date()">
+    Click me to display the current date and time.</button>
+    <p id="demo"></p>
+    
+    <iframe src="https://calendar.google.com/calendar/embed?src=alfalahacademy.com_tpamvgh2f4gc3bf8a1mlle267c%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  </div>
+
+
+
+  
+  <!--              News/Articles                     -->
+
+  <div id="News" class="tabcontent"> <div class='Divider'> </div>
+    <h1 class="title">News</h1>
+    Here's everything that's going on in Al Falah. If you have anything to report to us then you can reach out to us through the "Contact Us" page. All help is appreciated!
+    <p></p> 
+  </div>
+
+
+  <!-- Contact -->
+
+  <div id="Contact" class="tabcontent"> <div class='Divider'> </div>
+    <h1 class="title">Contact Us!</h1>
+    <p>Have any questions or concerns? Want to contribute to the newsletter? Contact us and we'll take a look.</p>
+  </div>
+
+<!--          About            -->
+  
+  <div id="About" class="tabcontent"> <div class='Divider'> </div>
+    <h1 class="title">About Us</h1>
+    <p>Welcome to the official Al Falah Academy Newsletter. This website is run by students and we are trying to keep you updated on all the news going around the school. Make sure to check in weekly! </p>
+  </div>
+
+  <script>
+  function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+  }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+  
+<!--                    body                          -->
+  
+
+<!--
+  <script type="module" src="script.js"></script>
+  <script>
+  function myFunction() {
+    alert("Welcome! This page is updated weekly, so make sure to check in!");
+  }
+  </script>
+  -->
+  <div class="social-icons">
+    <a href="https://alfalahacademy.com/">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://alfalahacademy.com/">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="https://alfalahacademy.com/">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://alfalahacademy.com/">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://alfalahacademy.com/">
+      <i class="fab fa-youtube"></i>
+    </a>
+  </div>
+</div>
 </body>
+
+
+  <!--          Featured Articles       -->
+
+<div class="featuretitle"><h1>Featured Articles</h1></div>
+  
+  <div class='HI'> </div>
+
+  <div class='Divider'> </div>
+
+  <div class='SBHI articles' id='1'> </div>
+
+  <div class='Divider'> </div>
+
+  <div class='SBHI whatsnew' id='2'> </div>
+
+  <div class='Divider'> </div>
+
+  <div class='SBHI hadith'></div>
+
+  <div class='Divider'> </div>
+
+
+<!--                 Credits/End                    -->
+  <div class='end' id='end'> 
+  
+  <p>Copyright © Al Falah Academy. All Rights Reserved 
+    
+  1835 Shackleford Court Norcross GA 30093
+    
+  Telephone: 678-502-7211
+    
+  Fax: 866-305-9050
+    
+  E-mail: info@alfalahacademy.com
+    
+  Facebook
+    
+  LinkedIn
+  
+  </p>
+  
+  
+  
+  
+  </div>
 </html>
