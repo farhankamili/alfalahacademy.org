@@ -1,20 +1,41 @@
 :root{
-  --blue: #30278bff;
+  --blue: #25205aff;
   --amber: #ffe5a8ff;
   --cream: #FEFFDA;
   --light-red: #FD8787ff;
   --nyanza: #496292;
   scroll-behavior:smooth;
 }
-body {
+
+/*MEDIA QUERIES*/
+@media (max-width: 440px) {
+.logo{
+  overflow: hidden;
+  width: 0px;
+  height: 0px;
+}
+grid {
+    width: 100%;
+    flex-direction: column;
+  }
+
+}
+
+/* MAIN */
+html{
+  font-family:  -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  text-align: center;
+}
+html, body {
+  padding:0;
   margin: 0 ;
-  margin-top: -18;
-  border: none;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
 * {
-  
+  box-sizing: border-box;
 }
 
 main {
@@ -25,6 +46,15 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+li{
+  color:var(--blue);
+  font-family:'Rubik';
+}
+
+ol{
+  line-height:35px;
 }
 
 .title {
@@ -46,9 +76,11 @@ main {
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
+/* GRID AND CARD */ 
 
 .grid {
   display: flex;
@@ -56,6 +88,8 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   max-width: 800px;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
 }
 
 .card {
@@ -68,6 +102,7 @@ main {
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  font-family: inherit; /* Important for vertical align on mobile phones */
 }
 
 .card:hover,
@@ -78,8 +113,8 @@ main {
 }
 
 .card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+  margin: 0 0 1rem 0 !important;
+  font-size: 1.5rem !important;
 }
 
 .card p {
@@ -88,15 +123,18 @@ main {
   line-height: 1.5;
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-  .end{
-    
-  }
+.title,
+.description {
+  text-align: center;
 }
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+
 .social-icons {
   display: grid;
   font-size: 3rem;
@@ -106,21 +144,22 @@ main {
   align-items: center;
 }
 .end {
-  height: 100px;
-  border-top:5px solid var(--saffron);
-  background-color: var(--van-dyke);
+  height: 80px;
+  border-top:5px solid var(--amber);
+  background-color: var(--blue);
+  color: var(--amber) !important;
   width: 100% !important;
   margin-bottom: 0 !important;
-}
-.nav{
-  background-color: var(--van-dyke);
-  height: 80px;
-  width:100%;
-  color:#F0EBD9ff !important;  font-family: Sans-serif;
-  text-decoration: none;
-  border-bottom: 5px solid var(--saffron);
-}
+  position: fixed; 
+  bottom: 0;
 
+}
+#endtext {
+  color: var(--amber) !important;
+  display: inline-block;
+  padding: 5px 5px 3px 5px;
+  margin: 0;
+}
 
 /* ALL LINKS */
 
@@ -141,33 +180,13 @@ a:visited {
   text-decoration:none;
 }
 
-/* CONTENT  */
-.HI { 
-  border: 4px solid red;
-  height: 80px;
-  overflow: hidden; 
-  padding: 15px;
-  width: 60%;
-  margin: 15px auto;
-}
+/* CONTENT */
+
 
 .Divider {
   border-top: 5px solid black;
   margin: 15px auto;
-  width: 70%
-}
-.SBHI {
-  border: 5px solid blue;
-  height: 100px;
-  margin: 15px auto;
-  width: 80%;
-}
-
-.AFAWEB{
-  color: var(--saffron);
-  text-decoration: none;
-  font-weight: bold;
-  font-family: Sans-serif;
+  width: 70%;
 }
 
 .button{
@@ -179,6 +198,26 @@ a:visited {
   font-style:strong;
   margin: 0 auto;
 }
+#textlink {
+  text-decoration: none;
+  color: var(--blue);
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+#small {
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 500px;
+}
+#large {
+
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 700px;
+}
 
 .ClubNews{
   display:flex;
@@ -187,6 +226,7 @@ a:visited {
   align-items: center;
   margin:auto;
   text-align:center;
+  margin-top: 20px;
 }
 
 p{
@@ -194,57 +234,55 @@ p{
 }
 .centerbut {
   text-align: center;
+  text-decoration-line: none;
+
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: var(--blue);
+  margin-bottom: 40px;
+  border-bottom: 5px solid var(--amber);
+}
+.navlink {
+  font-size: 25px;
+  background-color: var(--blue);
+  color: var(--amber);
+  padding-top: 25px;
+  width: 20%;
+  text-align: center;
+  font-family: 'Bebas Neue', sans-serif;
   text-decoration: none;
 }
-/* Nav BAR */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+
+.navlink:hover {
+  background-color: var(--nyanza);
 }
-li {
-  float: left;
-  color: var(--blue);
-  top: 50%;
-  vertical-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 55px;
-  font-weight: 10px;
-  font-style: strong;
+.navlink:active {
+  background-color: orange;
 }
-.navlinks {
-  display: block;
-  padding: 8px;
-  background-color: var(--amber);
-  font-style: Georgia;
-  
-}
-nav {
-  background-color: var(--amber);
-  height: 60px;
-  position: fixed;
-  width: 100%;
-  top:0;
-  box-shadow: 0, -10, 5px, 5px, black;
-  border-bottom: 4px solid var(--blue);
+#spacer {
+  height: 20px;
 }
 
-.logo {
-  background-image: url(https://alfalahacademy.com/wp-content/uploads/2020/12/AlFalahAcademyLogoWide-e1672951290368.png);
-background-size: cover;
-  height: 50px;
-  width: 130px;
-  float: right;
-  padding-right: 150px;
-  margin-top: 5px;
+#articlelink {
+  text-decoration: none;
+  background-color: var(--blue);
+  color: var(--amber);
+  height: 80px !important;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 15px 0px 30px 0px;
+  border: 5px solid var(--amber);
 }
 
-.end {
-  background-color: var(--amber);
-  border-top: 5px solid var(--blue);;
-}
 /*Nav*/ 
 
 .tablink {
@@ -260,4 +298,19 @@ background-size: cover;
 .tabcontent{
 display:none;
   margin-top: 50px;
+}
+.more{
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid black;
+}
+
+@media (max-width: 500px) {
+  .navlink {
+    width: 15%;
+    font-size: 15px;
+  }
+
 }
