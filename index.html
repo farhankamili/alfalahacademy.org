@@ -1,4 +1,4 @@
-<!-- silly document -->
+<!--            silly document pain              -->
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -7,29 +7,43 @@
     <meta onload="openPage('Home')">
     <meta name="viewport" content="width=device-width">
     <title>Al Falah Academy Newsletter</title>
-    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" /> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat&family=Mooli&display=swap" rel="stylesheet">
+
   </head>
   
-<!--                     nav                          -->
-  <div class='navdiv'> 
-    <div class="line"> </div>
-<nav>
-<ul>
-  <li><a class='navlinks' target="_self" onclick="openPage('Home')">Home</a></li>
-  
-  <li><a class='navlinks' target="_self" onclick="openPage('News')">Articles</a></li>
-  
-  <li><a class='navlinks' target="_self" onclick="openPage('Contact')">Contact Us</a></li>
-  
-  <li><a class='navlinks' target="_self" onclick="openPage('About')">About</a></li>
-  
-</ul>
-  <div class='logo'></div>
-</nav>
-  </div>
-  
-<!--                     Website                          -->
+<!--                     nav                  -->
+  <nav class='navbar' id='nav'> 
+    <a class='navlink' onclick="openPage('Home')" href='#Home'> Home</a>
+    <a class='navlink' onclick="openPage('ClubNews')" href='#ClubNews'>Calendar</a>
+    <a class='navlink' onclick="openPage('News')" >News</a>
+    <a class='navlink' onclick="openPage('Contact')" >Contact Us!</a>
 
+  </nav>
+  
+<!--                 Loading  -->              
+
+  <body onload="myFunction()" style="margin:;">
+
+  <div id="loader"></div>
+
+  <script>
+  var myVar;
+
+  function myFunction() {
+    myVar = setTimeout(showPage, 100);
+  }
+
+  function showPage() {
+    document.getElementById("loader").style.visibility = "hidden";
+    openPage('Home')
+  }
+  </script>
+
+<!--             Website              -->
   
   <div id="Home" class="tabcontent">
  
@@ -52,27 +66,21 @@
     
     <section class="grid">
       
-         <div class='card' target="_self" onclick="openPage('Recap')">    <div href="" class='card tablink'>
+         <div class='recapcard' target="_self" onclick="openPage('Recap')">    <div href="" class='card tablink'>
         <h2 class="main-content">Recap &rarr;</h2>
         <p class="main-content">
          Here's a summary of what happened last week.
         </p>
       </div></div>
 
-      <div class='card' target="_self" onclick="openPage('ShoutOuts')"> 
-      <div   target="_self" href="" class='card tablink' onclick="openPage('ShoutOuts')">
-        <h2 class="main-content">Shout-outs &rarr;</h2>
-        <p class="main-content">Check out what the students have been doing.</p>
-      </div></div>
-
-     <div class="card" target="_self" onclick="openPage('Polls')">  <div  target="_self" href="" class='card tablink' onclick="openPage('Polls')">
+     <div class="pollscard" target="_self" onclick="openPage('Polls')">  <div  target="_self" href="" class='card tablink' onclick="openPage('Polls')">
         <h2 class="main-content">Polls &rarr;</h2>
         <p class="main-content">
          Get the student's opinions on our weekly polls.
         </p>
       </div></div>
 
-      <div class='card' target="_self" onclick="openPage('Hadiths')"> 
+      <div class='hadithscard' target="_self" onclick="openPage('Hadiths')"> 
       <div   target="_self" href="" class='card tablink' onclick="openPage('Hadiths')">
         <h2 class="main-content">Weekly Hadith &rarr; </h2>
         <p class="main-content">
@@ -80,77 +88,97 @@
         </p>
       </div></div>
 
-      <div class='card' target="_self" onclick="openPage('ClubNews')"> 
+      <div class='clubnewscard' target="_self" onclick="openPage('ClubNews')"> 
       <div   target="_self" href="" class='card tablink' onclick="openPage('ClubNews')">
-        <h2 class="main-content">Club News &rarr;</h2>
+        <h2 class="main-content">School Calendar &rarr;</h2>
         <p class="main-content">
-         Catch all the updates and events in the high school clubs.
+         Catch all the updates and events in the high school.
     
         </p>
       </div></div>
       
     </section>
-<section><p class="main-content AFAWEB centerbut"><a href="https://alfalahacademy.com/">Check out the official Al-Falah Academy Website!</a></p></section>
+<section><p class="main-content AFAWEB centerbut"><a id='textlink' href="https://alfalahacademy.com/">Check out the official Al-Falah Academy Website!</a></p></section>
   </main>
 
      
   </div>
 
-  
-<!--            card stuff (weekly updates)           -->
-  <div id="Recap" class="tabcontent"><div class='Divider'> </div>
+<div id='spacer'></div>                                          
+  <div id="Recap" class="tabcontent"><div class='Divider'></div>
     <h1 class="title">Recap</h1>
-    <p>Here's what happened last week:</p>
-  </div>
-  
-  <div id="ShoutOuts" class="tabcontent"><div class='Divider'> </div>
-    <h1 class="title">Shout-Outs</h1>
-     <p>A quick tribute to the people of the school.</p>
+    <p>Here's what happened last week: 
+    <ol>
+    <li class="recaptext">   </li> 
+    <li class="recaptext">Tuesday: </li>
+    <li class="recaptext">Wednesday: </li>
+    <li class="recaptext">Thursday: </li> 
+    <li class="recaptext">Friday: </li>
+    </ul>
+  </p>
   </div>
 
+<!--            Polls         -->
+  <div id='spacer'></div>
   <div id="Polls" class="tabcontent"><div class='Divider'> </div>
     <h1 class="title">Polls</h1>
      <p>Check out what the students have to say this week!</p>
   </div>
-  
+
+    <!-- Hadith -->
+     <div id='spacer'></div>
   <div id="Hadiths" class="tabcontent"><div class='Divider'> </div>
     <h1 class="title">Hadith of the Week</h1>
      <p>Check out the hadith of the week, and make sure to make dua for the civilians being killed in the ongoing war.</p>
   </div>
-  
+
+  <!-- Clubnews -->
+    
   <div id="ClubNews" class="tabcontent ClubNews"><div class='Divider'> </div>
-    <h1 class="title">Club News</h1>
-    <p>Find out all the news with the Al-Falah Clubs.</p>
+    <div id='spacer'></div>
+    <div id='spacer'></div>
+    <h1 class="title">School Calendar</h1>
+    <p>Find out all the news with Al-Falah.</p>
     <button class="button" type="button"
     onclick="document.getElementById('demo').innerHTML = Date()">
     Click me to display the current date and time.</button>
     <p id="demo"></p>
     
-    <iframe src="https://calendar.google.com/calendar/embed?src=alfalahacademy.com_tpamvgh2f4gc3bf8a1mlle267c%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://calendar.google.com/calendar/embed?height=800&wkst=1&bgcolor=%23ffe5a8&ctz=America%2FNew_York&title=Al%20Falah%20Academy%20Calendar&showNav=1&showTitle=0&showPrint=0&showTz=0&showDate=0&showCalendars=0&showTabs=0&src=Y19kMzZlOTk4OTI5YWNlOGVhZjNjZTNjNmM2NjQyNzBmMjM0OTY4ZDk0YzczZDEzMzIxYWIyYWRjMDMwYmFhMTEyQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23B39DDB" style="border-width:0" width="800" height="800" frameborder="0" scrolling="no"></iframe>
   </div>
 
 
 
   
   <!--              News/Articles                     -->
-
-  <div id="News" class="tabcontent"> <div class='Divider'> </div>
-    <h1 class="title">News</h1>
-    Here's everything that's going on in Al Falah. If you have anything to report to us then you can reach out to us through the "Contact Us" page. All help is appreciated!
-    <p></p> 
-  </div>
+    <div id="News" class="tabcontent">
+      <div id='spacer'></div>
+      <div id='spacer'></div>
+      <h1>News</h1>
+      <p>Some news this fine day!</p>
+        <div id='spacer'></div>
+      <div onclick="openPage('two')" id='articlelink'>Latest (11/12/2023): Midterms Week</div>
+      <div id='spacer'></div>
+      <div id='spacer'></div>
+    </div>
 
 
   <!-- Contact -->
 
-  <div id="Contact" class="tabcontent"> <div class='Divider'> </div>
+  <div id="Contact" class="tabcontent"> 
+    <div id='spacer'></div>
+    <div id='spacer'></div>
+    <div id='spacer'></div>
+    <div id='bodycontact'>
     <h1 class="title">Contact Us!</h1>
-    <p>Have any questions or concerns? Want to contribute to the newsletter? Contact us and we'll take a look.</p>
+    <p id='large'>Welcome to the official Al Falah Academy Newsletter. This website is run by students and we are trying to keep you updated on all the news going around the school. Make sure to check in weekly! </p>
+    <p id='small'>Have any questions or concerns? Want to contribute to the newsletter? Have any bugs or issues to report? <a id='textlink' href='mailto: aniqa.ali.3342@alfalahacademy.com'>Contact us</a> and we'll take a look.</p>
+    </div>
   </div>
 
 <!--          About            -->
   
-  <div id="About" class="tabcontent"> <div class='Divider'> </div>
+  <div id="About" class="tabcontent"> 
     <h1 class="title">About Us</h1>
     <p>Welcome to the official Al Falah Academy Newsletter. This website is run by students and we are trying to keep you updated on all the news going around the school. Make sure to check in weekly! </p>
   </div>
@@ -173,81 +201,34 @@
   // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
   </script>
-  
-<!--                    body                          -->
-  
+ 
+    <!--                articles                   -->
+      <div id="two" class="tabcontent">
+        <div id='spacer'></div>
+        <h1>Midterm Week Schedule</h1>
+        <p>Make sure to study properly and take care of yourself!</p>
+      </div>
 
-<!--
-  <script type="module" src="script.js"></script>
-  <script>
-  function myFunction() {
-    alert("Welcome! This page is updated weekly, so make sure to check in!");
-  }
-  </script>
-  -->
-  <div class="social-icons">
-    <a href="https://alfalahacademy.com/">
-      <i class="fab fa-facebook-f"></i>
-    </a>
-    <a href="https://alfalahacademy.com/">
-      <i class="fab fa-twitter"></i>
-    </a>
-    <a href="https://alfalahacademy.com/">
-      <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://alfalahacademy.com/">
-      <i class="fab fa-linkedin-in"></i>
-    </a>
-    <a href="https://alfalahacademy.com/">
-      <i class="fab fa-youtube"></i>
-    </a>
-  </div>
-</div>
+    <!--                 Credits/End                    -->
+      <div class='end' id='end'> 
+
+      <p id='endtext'>Copyright Al Falah Academy©</a> All Rights Reserved </p>
+
+        <p id='endtext'>1835 Shackleford Court Norcross GA 30093</p>
+
+          <p id='endtext'>Telephone: 678-502-7211</p>
+
+              <p id='endtext'>E-mail: info@alfalahacademy.com </p>
+
+      </div>
 </body>
 
 
-  <!--          Featured Articles       -->
-
-<div class="featuretitle"><h1>Featured Articles</h1></div>
-  
-  <div class='HI'> </div>
-
-  <div class='Divider'> </div>
-
-  <div class='SBHI articles' id='1'> </div>
-
-  <div class='Divider'> </div>
-
-  <div class='SBHI whatsnew' id='2'> </div>
-
-  <div class='Divider'> </div>
-
-  <div class='SBHI hadith'></div>
-
-  <div class='Divider'> </div>
-
-
-<!--                 Credits/End                    -->
-  <div class='end' id='end'> 
-  
-  <p>Copyright © Al Falah Academy. All Rights Reserved 
-    
-  1835 Shackleford Court Norcross GA 30093
-    
-  Telephone: 678-502-7211
-    
-  Fax: 866-305-9050
-    
-  E-mail: info@alfalahacademy.com
-    
-  Facebook
-    
-  LinkedIn
-  
-  </p>
-  
-  
-  
-  
-  </div>
 </html>
+
+<!-- silliest document of them all (we are not qualified for this) -->
+
+
+
+
+
